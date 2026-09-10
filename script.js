@@ -1,25 +1,54 @@
-/* ===============================
-   MOBILE MENU
-================================ */
+```javascript
+/* =========================
+   LOADER
+========================= */
 
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
+window.addEventListener("load", function () {
 
-menuBtn.addEventListener("click", () => {
+    const loader =
+        document.getElementById("loader");
 
-    navMenu.classList.toggle("active");
+    setTimeout(function () {
 
-    menuBtn.textContent =
-        navMenu.classList.contains("active")
-        ? "×"
-        : "☰";
+        loader.classList.add("hide");
+
+    }, 900);
 
 });
 
 
-document.querySelectorAll("nav a").forEach(link => {
+/* =========================
+   MOBILE MENU
+========================= */
 
-    link.addEventListener("click", () => {
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const navMenu =
+    document.getElementById("navMenu");
+
+
+menuBtn.addEventListener("click", function () {
+
+    navMenu.classList.toggle("active");
+
+    if (navMenu.classList.contains("active")) {
+
+        menuBtn.textContent = "×";
+
+    } else {
+
+        menuBtn.textContent = "☰";
+
+    }
+
+});
+
+
+document.querySelectorAll("nav a")
+.forEach(function (link) {
+
+    link.addEventListener("click", function () {
 
         navMenu.classList.remove("active");
 
@@ -30,57 +59,80 @@ document.querySelectorAll("nav a").forEach(link => {
 });
 
 
-/* ===============================
-   NAVBAR SCROLL
-================================ */
+/* =========================
+   NAVBAR
+========================= */
 
-const navbar = document.getElementById("navbar");
+const navbar =
+    document.getElementById("navbar");
 
-window.addEventListener("scroll", () => {
+
+window.addEventListener("scroll", function () {
 
     if (window.scrollY > 30) {
+
         navbar.classList.add("scrolled");
+
     } else {
+
         navbar.classList.remove("scrolled");
+
     }
 
 });
 
 
-/* ===============================
+/* =========================
    TYPING EFFECT
-================================ */
+========================= */
 
-const typingText = document.getElementById("typingText");
+const typingText =
+    document.getElementById("typingText");
+
 
 const words = [
     "طالب طب",
     "Web Developer",
+    "Programmer",
     "Trader",
-    "Problem Solver",
+    "Technology Enthusiast",
     "Lifelong Learner"
 ];
+
 
 let wordIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
+
 function typeEffect() {
 
-    const currentWord = words[wordIndex];
+    const currentWord =
+        words[wordIndex];
+
 
     if (!deleting) {
 
         typingText.textContent =
-            currentWord.substring(0, charIndex + 1);
+            currentWord.substring(
+                0,
+                charIndex + 1
+            );
 
         charIndex++;
 
-        if (charIndex === currentWord.length) {
+
+        if (
+            charIndex ===
+            currentWord.length
+        ) {
 
             deleting = true;
 
-            setTimeout(typeEffect, 1600);
+            setTimeout(
+                typeEffect,
+                1300
+            );
 
             return;
         }
@@ -88,9 +140,13 @@ function typeEffect() {
     } else {
 
         typingText.textContent =
-            currentWord.substring(0, charIndex - 1);
+            currentWord.substring(
+                0,
+                charIndex - 1
+            );
 
         charIndex--;
+
 
         if (charIndex === 0) {
 
@@ -98,64 +154,94 @@ function typeEffect() {
 
             wordIndex++;
 
-            if (wordIndex >= words.length) {
+            if (
+                wordIndex >=
+                words.length
+            ) {
+
                 wordIndex = 0;
+
             }
 
         }
 
     }
 
+
     setTimeout(
         typeEffect,
-        deleting ? 55 : 100
+        deleting ? 50 : 90
     );
+
 }
+
 
 typeEffect();
 
 
-/* ===============================
-   CURRENT YEAR
-================================ */
+/* =========================
+   ACTIVE NAV
+========================= */
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+const navLinks =
+    document.querySelectorAll(
+        "nav a"
+    );
 
 
-/* ===============================
-   ACTIVE NAVIGATION
-================================ */
-
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", function () {
 
     let current = "";
 
-    sections.forEach(section => {
 
-        const top =
+    sections.forEach(function (section) {
+
+        const sectionTop =
             section.offsetTop - 180;
 
-        if (window.scrollY >= top) {
-            current = section.id;
+
+        if (
+            window.scrollY >=
+            sectionTop
+        ) {
+
+            current =
+                section.getAttribute("id");
+
         }
 
     });
 
-    navLinks.forEach(link => {
+
+    navLinks.forEach(function (link) {
 
         link.classList.remove("active");
+
 
         if (
             link.getAttribute("href") ===
             "#" + current
         ) {
+
             link.classList.add("active");
+
         }
 
     });
 
 });
+
+
+/* =========================
+   YEAR
+========================= */
+
+document.getElementById("year")
+    .textContent =
+    new Date().getFullYear();
+```
