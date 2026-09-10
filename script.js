@@ -1,205 +1,161 @@
-```javascript
-/* ================================
-   BASMALA WEBSITE JAVASCRIPT
+/* ===============================
+   MOBILE MENU
 ================================ */
 
-const body = document.body;
-const header = document.getElementById("header");
-const themeBtn = document.getElementById("themeBtn");
 const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-const year = document.getElementById("year");
-
-/* ================================
-   Current Year
-================================ */
-
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
-
-
-/* ================================
-   Header Scroll Effect
-================================ */
-
-window.addEventListener("scroll", () => {
-
-  if (window.scrollY > 30) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-
-});
-
-
-/* ================================
-   Mobile Menu
-================================ */
+const navMenu = document.getElementById("navMenu");
 
 menuBtn.addEventListener("click", () => {
 
-  navLinks.classList.toggle("active");
+    navMenu.classList.toggle("active");
 
-  if (navLinks.classList.contains("active")) {
-    menuBtn.textContent = "×";
-  } else {
-    menuBtn.textContent = "☰";
-  }
-
-});
-
-
-/* Close mobile menu after clicking link */
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-  link.addEventListener("click", () => {
-
-    navLinks.classList.remove("active");
-    menuBtn.textContent = "☰";
-
-  });
+    menuBtn.textContent =
+        navMenu.classList.contains("active")
+        ? "×"
+        : "☰";
 
 });
 
 
-/* ================================
-   Dark / Light Mode
-================================ */
+document.querySelectorAll("nav a").forEach(link => {
 
-const savedTheme = localStorage.getItem("basmala-theme");
+    link.addEventListener("click", () => {
 
-if (savedTheme === "light") {
-  body.classList.add("light");
-  themeBtn.textContent = "☾";
-} else {
-  themeBtn.textContent = "☀";
-}
+        navMenu.classList.remove("active");
 
-
-themeBtn.addEventListener("click", () => {
-
-  body.classList.toggle("light");
-
-  const isLight = body.classList.contains("light");
-
-  localStorage.setItem(
-    "basmala-theme",
-    isLight ? "light" : "dark"
-  );
-
-  themeBtn.textContent = isLight ? "☾" : "☀";
-
-});
-
-
-/* ================================
-   Scroll Reveal Animation
-================================ */
-
-const revealElements = document.querySelectorAll(
-  ".section-heading, .glass, .info-card, .project-card, .trading-box, .contact-box, .timeline-item"
-);
-
-revealElements.forEach(element => {
-  element.classList.add("reveal");
-});
-
-
-const observer = new IntersectionObserver(
-  entries => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
-      }
+        menuBtn.textContent = "☰";
 
     });
 
-  },
-  {
-    threshold: 0.12
-  }
-);
-
-
-revealElements.forEach(element => {
-  observer.observe(element);
 });
 
 
-/* ================================
-   Active Navigation
+/* ===============================
+   NAVBAR SCROLL
 ================================ */
 
-const sections = document.querySelectorAll("section[id]");
-const navItems = document.querySelectorAll(".nav-links a");
+const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
 
-  let current = "";
-
-  sections.forEach(section => {
-
-    const sectionTop = section.offsetTop - 150;
-
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute("id");
+    if (window.scrollY > 30) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
     }
-
-  });
-
-  navItems.forEach(item => {
-
-    item.classList.remove("active");
-
-    if (item.getAttribute("href") === `#${current}`) {
-      item.classList.add("active");
-    }
-
-  });
 
 });
 
 
-/* ================================
-   Smooth Button Hover Effect
+/* ===============================
+   TYPING EFFECT
 ================================ */
 
-document.querySelectorAll(".btn, .social-btn").forEach(button => {
+const typingText = document.getElementById("typingText");
 
-  button.addEventListener("mousemove", event => {
+const words = [
+    "طالب طب",
+    "Web Developer",
+    "Trader",
+    "Problem Solver",
+    "Lifelong Learner"
+];
 
-    const rect = button.getBoundingClientRect();
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
+function typeEffect() {
 
-    button.style.setProperty("--mouse-x", `${x}px`);
-    button.style.setProperty("--mouse-y", `${y}px`);
+    const currentWord = words[wordIndex];
 
-  });
+    if (!deleting) {
 
-});
+        typingText.textContent =
+            currentWord.substring(0, charIndex + 1);
 
+        charIndex++;
 
-/* ================================
-   Prevent Empty Project Links
-================================ */
+        if (charIndex === currentWord.length) {
 
-document.querySelectorAll('.project-link[href="#"]').forEach(link => {
+            deleting = true;
 
-  link.addEventListener("click", event => {
-    event.preventDefault();
+            setTimeout(typeEffect, 1600);
 
-    alert(
-      "This project link is ready — replace # with your project URL."
+            return;
+        }
+
+    } else {
+
+        typingText.textContent =
+            currentWord.substring(0, charIndex - 1);
+
+        charIndex--;
+
+        if (charIndex === 0) {
+
+            deleting = false;
+
+            wordIndex++;
+
+            if (wordIndex >= words.length) {
+                wordIndex = 0;
+            }
+
+        }
+
+    }
+
+    setTimeout(
+        typeEffect,
+        deleting ? 55 : 100
     );
-  });
+}
+
+typeEffect();
+
+
+/* ===============================
+   CURRENT YEAR
+================================ */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+/* ===============================
+   ACTIVE NAVIGATION
+================================ */
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const top =
+            section.offsetTop - 180;
+
+        if (window.scrollY >= top) {
+            current = section.id;
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (
+            link.getAttribute("href") ===
+            "#" + current
+        ) {
+            link.classList.add("active");
+        }
+
+    });
 
 });
-```
