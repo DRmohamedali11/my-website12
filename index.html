@@ -1,39 +1,43 @@
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Basmala | Medical Student • Developer • Trader</title>
-
-    <meta
-        name="description"
-        content="الموقع الشخصي لبسم الله — الطب، البرمجة، التداول والتعلم المستمر."
-    >
+    <title>Dr. Mohamed Ali | Personal Website</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- ===== LOADING ===== -->
+
+<div class="loader" id="loader">
+    <div class="loader-logo">MA</div>
+    <h2>DR. MOHAMED ALI</h2>
+    <div class="loader-line"></div>
+</div>
+
+
+<!-- ===== NAVBAR ===== -->
 
 <header class="navbar" id="navbar">
 
     <div class="container nav-content">
 
         <a href="#home" class="logo">
-            <span>B</span>
+            <span>MA</span>
+
             <div>
-                <strong>Basmala</strong>
+                <strong>Dr. Mohamed Ali</strong>
                 <small>Personal Website</small>
             </div>
         </a>
@@ -43,7 +47,6 @@
             <a href="#about">عني</a>
             <a href="#skills">مهاراتي</a>
             <a href="#projects">مشاريعي</a>
-            <a href="#trading">التداول</a>
             <a href="#contact">تواصل معي</a>
         </nav>
 
@@ -54,61 +57,56 @@
 </header>
 
 
-<main>
-
-<!-- ================= HERO ================= -->
+<!-- ===== HERO ===== -->
 
 <section class="hero" id="home">
 
     <div class="container hero-grid">
 
-        <div class="hero-text">
+        <div class="hero-content">
 
-            <div class="availability">
+            <div class="available">
                 <span></span>
                 متاح للتواصل والاستفسارات
             </div>
 
-            <p class="small-title">مرحبًا، أنا</p>
+            <p class="welcome">أهلاً بك، أنا</p>
 
             <h1>
-                Basmala
+                DR. MOHAMED
+                <span>ALI</span>
             </h1>
 
-            <div class="typing-box">
-                <span>أنا </span>
-                <strong id="typingText"></strong>
-                <span class="cursor">|</span>
+            <div class="typing">
+                أنا
+                <strong id="typingText">طالب طب</strong>
+                <i>|</i>
             </div>
 
-            <p class="hero-description">
-                شخص شغوف بالتعلم والتطور، أجمع بين دراسة
-                <strong>الطب</strong>،
-                وحب <strong>البرمجة والتكنولوجيا</strong>،
-                واهتمامي بـ <strong>الأسواق والتداول</strong>.
+            <p class="description">
+                شخص شغوف بالعلم والتكنولوجيا والتطور المستمر،
+                أجمع بين دراسة الطب والبرمجة والتكنولوجيا،
+                بالإضافة إلى اهتمامي بعالم الأسواق والتداول.
             </p>
 
-            <p class="hero-description second">
-                هدفي ليس أن أكون محصورًا في مجال واحد، بل أن أتعلم
-                من كل مجال وأستخدم المعرفة التي أكتسبها لبناء مستقبل
-                أفضل وأكثر تأثيرًا.
+            <p class="description">
+                أؤمن أن النجاح الحقيقي يأتي من التعلم المستمر،
+                والعمل الجاد، وتحويل الأفكار إلى مشاريع حقيقية.
             </p>
 
-            <div class="hero-buttons">
+            <div class="buttons">
 
                 <a href="#about" class="btn primary">
-                    تعرف عليّ أكثر
-                    <span>↓</span>
+                    تعرف عليّ أكثر ↓
                 </a>
 
                 <a href="#contact" class="btn secondary">
-                    تواصل معي
-                    <span>↗</span>
+                    تواصل معي ↗
                 </a>
 
             </div>
 
-            <div class="quick-info">
+            <div class="stats">
 
                 <div>
                     <strong>01</strong>
@@ -117,7 +115,7 @@
 
                 <div>
                     <strong>02</strong>
-                    <span>Programming</span>
+                    <span>Technology</span>
                 </div>
 
                 <div>
@@ -130,102 +128,47 @@
         </div>
 
 
-        <!-- PHOTO -->
+        <!-- الصورة -->
 
-        <div class="hero-photo">
+        <div class="hero-image">
 
-            <div class="photo-glow"></div>
+            <div class="glow"></div>
 
-            <div class="photo-card">
+            <div class="image-card">
 
-                <div class="photo-top">
-                    <span>MY JOURNEY</span>
+                <div class="image-top">
+                    <span>PERSONAL BRAND</span>
                     <span>2026</span>
                 </div>
 
-                <div class="image-wrapper">
-                    <img
-                        src="profile.jpg"
-                        alt="Basmala"
-                    >
-                </div>
+                <img src="profile.jpg" alt="Dr Mohamed Ali">
 
-                <div class="photo-info">
+                <div class="image-bottom">
 
                     <div>
-                        <strong>Basmala</strong>
-                        <span>Medical Student</span>
+                        <strong>Dr. Mohamed Ali</strong>
+                        <small>
+                            Medicine • Technology • Trading
+                        </small>
                     </div>
 
-                    <div class="verified">
-                        ✓
-                    </div>
+                    <span class="check">✓</span>
 
                 </div>
 
             </div>
 
-            <div class="floating-card card-one">
-                <span>✚</span>
-                Medicine
+            <div class="floating medicine">
+                ✚ Medicine
             </div>
 
-            <div class="floating-card card-two">
-                <span>&lt;/&gt;</span>
-                Coding
+            <div class="floating programming">
+                &lt;/&gt; Programming
             </div>
 
-            <div class="floating-card card-three">
-                <span>↗</span>
-                Trading
+            <div class="floating trading">
+                ↗ Trading
             </div>
-
-        </div>
-
-    </div>
-
-    <div class="scroll-down">
-        <span></span>
-        اكتشف المزيد
-    </div>
-
-</section>
-
-
-<!-- ================= MOVING TEXT ================= -->
-
-<section class="marquee-section">
-
-    <div class="marquee">
-
-        <div class="marquee-content">
-
-            <span>MEDICINE</span>
-            <i>✦</i>
-
-            <span>PROGRAMMING</span>
-            <i>✦</i>
-
-            <span>TRADING</span>
-            <i>✦</i>
-
-            <span>LEARNING</span>
-            <i>✦</i>
-
-            <span>CREATIVITY</span>
-            <i>✦</i>
-
-            <span>DISCIPLINE</span>
-            <i>✦</i>
-
-            <span>MEDICINE</span>
-            <i>✦</i>
-
-            <span>PROGRAMMING</span>
-            <i>✦</i>
-
-            <span>TRADING</span>
-            <i>✦</i>
 
         </div>
 
@@ -234,22 +177,57 @@
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ===== MOVING TEXT ===== -->
+
+<section class="marquee">
+
+    <div class="marquee-track">
+
+        <span>MEDICINE</span>
+        <b>✦</b>
+
+        <span>PROGRAMMING</span>
+        <b>✦</b>
+
+        <span>TECHNOLOGY</span>
+        <b>✦</b>
+
+        <span>TRADING</span>
+        <b>✦</b>
+
+        <span>LEARNING</span>
+        <b>✦</b>
+
+        <span>DISCIPLINE</span>
+        <b>✦</b>
+
+        <span>MEDICINE</span>
+        <b>✦</b>
+
+        <span>PROGRAMMING</span>
+        <b>✦</b>
+
+    </div>
+
+</section>
+
+
+<!-- ===== ABOUT ===== -->
 
 <section class="section" id="about">
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="heading">
 
-            <span class="section-number">01</span>
+            <span>01</span>
 
             <div>
-                <p>ABOUT ME</p>
+                <small>ABOUT ME</small>
 
                 <h2>
                     من أنا؟
-                    <span>وإلى أين أريد أن أصل؟</span>
+                    <strong>وما الذي أطمح إليه؟</strong>
                 </h2>
             </div>
 
@@ -258,47 +236,55 @@
 
         <div class="about-grid">
 
-            <div class="about-main">
+            <div class="about-text">
 
                 <p>
-                    أنا Basmala، شخص أؤمن أن الإنسان لا يجب أن يتوقف
-                    عند مجال واحد من المعرفة.
+                    أنا <strong>Dr. Mohamed Ali</strong>،
+                    شخص شغوف بالتعلم والتطور المستمر،
+                    وأسعى دائمًا لبناء شخصية تجمع بين العلم،
+                    التكنولوجيا، التفكير والتحليل.
                 </p>
 
                 <p>
-                    دراسة الطب جعلتني أتعلم أهمية الدقة والصبر
-                    والتفكير المنطقي، بينما البرمجة علمتني كيف أحول
-                    الأفكار إلى مشاريع حقيقية يمكن استخدامها والاستفادة منها.
+                    دراسة الطب علمتني الدقة والصبر وتحمل المسؤولية،
+                    كما ساعدتني على تطوير طريقة منظمة في التفكير
+                    والتعامل مع المشكلات.
                 </p>
 
                 <p>
-                    وفي نفس الوقت، اهتمامي بالتداول والأسواق جعلني
-                    أكثر اهتمامًا بإدارة المخاطر، تحليل البيانات،
-                    التحكم في القرارات، وفهم الجانب النفسي وراء كل قرار.
+                    بجانب الطب، لدي اهتمام كبير بالبرمجة وتطوير
+                    المواقع والتكنولوجيا. أحب أن أتعلم كيف تعمل
+                    المواقع والتطبيقات، وكيف يمكن تحويل الفكرة
+                    إلى مشروع رقمي حقيقي.
                 </p>
 
                 <p>
-                    بالنسبة لي، الرحلة أهم من الوصول.
-                    كل يوم هو فرصة جديدة للتعلم، التجربة،
-                    تطوير المهارات، وبناء شيء أفضل من اليوم السابق.
+                    كما أهتم بعالم الأسواق والتداول، وأرى أن هذا
+                    المجال يعلم الإنسان الانضباط وإدارة المخاطر
+                    والصبر واتخاذ القرارات بطريقة محسوبة.
+                </p>
+
+                <p>
+                    هدفي هو الاستمرار في التعلم، وبناء مشاريع مفيدة،
+                    وتطوير مهاراتي، وترك أثر إيجابي في كل مجال أعمل فيه.
                 </p>
 
             </div>
 
 
-            <div class="about-side">
+            <div>
 
-                <div class="quote-card">
+                <div class="quote">
 
-                    <div class="quote-icon">“</div>
+                    <span>“</span>
 
                     <h3>
-                        لا أبحث عن طريق سهل،
-                        بل عن طريق يجعلني أفضل.
+                        المعرفة لا قيمة لها
+                        بدون تطبيق.
                     </h3>
 
                     <p>
-                        Learning • Building • Improving
+                        Learn • Build • Improve
                     </p>
 
                 </div>
@@ -307,17 +293,17 @@
 
                     <div>
                         <strong>∞</strong>
-                        <span>Learning</span>
+                        <small>Learning</small>
                     </div>
 
                     <div>
-                        <strong>3</strong>
-                        <span>Fields</span>
+                        <strong>03</strong>
+                        <small>Fields</small>
                     </div>
 
                     <div>
-                        <strong>1</strong>
-                        <span>Vision</span>
+                        <strong>01</strong>
+                        <small>Vision</small>
                     </div>
 
                 </div>
@@ -331,104 +317,90 @@
 </section>
 
 
-<!-- ================= SKILLS ================= -->
+<!-- ===== SKILLS ===== -->
 
-<section class="section dark-section" id="skills">
+<section class="section dark" id="skills">
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="heading">
 
-            <span class="section-number">02</span>
+            <span>02</span>
 
             <div>
-                <p>MY SKILLS</p>
+                <small>MY SKILLS</small>
 
                 <h2>
-                    مجالات
-                    <span>أعمل على تطويرها.</span>
+                    المجالات التي
+                    <strong>أطور نفسي فيها.</strong>
                 </h2>
             </div>
 
         </div>
 
 
-        <div class="skills-grid">
+        <div class="skills">
 
             <div class="skill-card">
 
-                <div class="skill-icon medical">✚</div>
+                <div class="icon">✚</div>
 
-                <span>01</span>
+                <small>01</small>
 
                 <h3>Medicine</h3>
 
                 <p>
-                    دراسة العلوم الطبية، التفكير التحليلي،
-                    البحث، التعلم المستمر، وفهم جسم الإنسان.
+                    دراسة العلوم الطبية، البحث، التحليل،
+                    والتعلم المستمر.
                 </p>
-
-                <div class="skill-line">
-                    <span></span>
-                </div>
 
             </div>
 
 
             <div class="skill-card featured">
 
-                <div class="skill-icon code">&lt;/&gt;</div>
+                <div class="icon">&lt;/&gt;</div>
 
-                <span>02</span>
+                <small>02</small>
 
                 <h3>Programming</h3>
 
                 <p>
-                    تصميم وتطوير المواقع، بناء الواجهات،
-                    JavaScript، HTML، CSS والعمل على المشاريع الرقمية.
+                    تطوير المواقع وتصميم الواجهات
+                    HTML و CSS و JavaScript.
                 </p>
-
-                <div class="skill-line">
-                    <span></span>
-                </div>
 
             </div>
 
 
             <div class="skill-card">
 
-                <div class="skill-icon trading">↗</div>
+                <div class="icon">↗</div>
 
-                <span>03</span>
+                <small>03</small>
 
                 <h3>Trading</h3>
 
                 <p>
-                    دراسة الأسواق، التحليل الفني، إدارة المخاطر،
-                    الانضباط، وعلم النفس في التداول.
+                    تحليل الأسواق، إدارة المخاطر،
+                    والانضباط النفسي.
                 </p>
-
-                <div class="skill-line">
-                    <span></span>
-                </div>
 
             </div>
 
         </div>
 
 
-        <div class="skills-tags">
+        <div class="tags">
 
             <span>HTML</span>
             <span>CSS</span>
             <span>JavaScript</span>
             <span>GitHub</span>
             <span>Web Design</span>
+            <span>Problem Solving</span>
             <span>Research</span>
             <span>Critical Thinking</span>
-            <span>Technical Analysis</span>
-            <span>Risk Management</span>
-            <span>Problem Solving</span>
 
         </div>
 
@@ -437,159 +409,91 @@
 </section>
 
 
-<!-- ================= PROJECTS ================= -->
+<!-- ===== PROJECTS ===== -->
 
 <section class="section" id="projects">
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="heading">
 
-            <span class="section-number">03</span>
+            <span>03</span>
 
             <div>
-                <p>MY PROJECTS</p>
+                <small>PROJECTS</small>
 
                 <h2>
                     أفكار تتحول إلى
-                    <span>مشاريع.</span>
+                    <strong>مشاريع حقيقية.</strong>
                 </h2>
             </div>
 
         </div>
 
 
-        <div class="projects-grid">
+        <div class="projects">
 
-            <article class="project">
+            <div class="project">
 
-                <div class="project-number">01</div>
+                <div class="project-icon">🌐</div>
 
-                <div class="project-symbol">🌐</div>
-
-                <span>WEB DEVELOPMENT</span>
+                <small>WEB DEVELOPMENT</small>
 
                 <h3>Personal Website</h3>
 
                 <p>
-                    موقع شخصي احترافي لعرض الهوية الشخصية،
-                    المهارات، المشاريع ومجالات الاهتمام.
+                    موقع شخصي احترافي لعرض الهوية والمهارات
+                    والمشاريع والتواصل.
                 </p>
 
-                <div class="tags">
-                    <small>HTML</small>
-                    <small>CSS</small>
-                    <small>JavaScript</small>
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
                 </div>
 
-            </article>
+            </div>
 
 
-            <article class="project">
+            <div class="project">
 
-                <div class="project-number">02</div>
+                <div class="project-icon">📊</div>
 
-                <div class="project-symbol">📊</div>
+                <small>MARKET ANALYSIS</small>
 
-                <span>TRADING</span>
-
-                <h3>Market Analysis</h3>
+                <h3>Trading Dashboard</h3>
 
                 <p>
-                    أفكار وتجارب لتحليل الأسواق وتنظيم البيانات
-                    وبناء نظام أكثر انضباطًا لاتخاذ القرارات.
+                    فكرة Dashboard لتنظيم بيانات الأسواق
+                    ومتابعة وتحليل الأفكار.
                 </p>
 
-                <div class="tags">
-                    <small>Analysis</small>
-                    <small>Risk</small>
-                    <small>Markets</small>
+                <div class="project-tags">
+                    <span>Markets</span>
+                    <span>Analysis</span>
                 </div>
 
-            </article>
+            </div>
 
 
-            <article class="project">
+            <div class="project">
 
-                <div class="project-number">03</div>
+                <div class="project-icon">🧠</div>
 
-                <div class="project-symbol">🧠</div>
-
-                <span>LEARNING</span>
+                <small>LEARNING</small>
 
                 <h3>Knowledge Hub</h3>
 
                 <p>
-                    مساحة لتنظيم الملاحظات والمصادر والأفكار
-                    التي أتعلمها في مختلف المجالات.
+                    مساحة رقمية لتنظيم الملاحظات والمصادر
+                    والأفكار التعليمية.
                 </p>
 
-                <div class="tags">
-                    <small>Research</small>
-                    <small>Notes</small>
-                    <small>Learning</small>
+                <div class="project-tags">
+                    <span>Research</span>
+                    <span>Learning</span>
                 </div>
 
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= TRADING ================= -->
-
-<section class="section trading-section" id="trading">
-
-    <div class="container trading-box">
-
-        <div>
-
-            <span class="section-number">04</span>
-
-            <p class="section-label">TRADING MINDSET</p>
-
-            <h2>
-                لا تحاول
-                <span>التنبؤ بالمستقبل.</span>
-            </h2>
-
-            <p>
-                اهتمامي بالتداول لا يعتمد على فكرة تحقيق أرباح
-                سريعة، بل على التعلم وفهم الأسواق وإدارة المخاطر
-                وبناء نظام واضح لاتخاذ القرارات.
-            </p>
-
-            <p>
-                أهم شيء تعلمته من الأسواق هو أن الانضباط وإدارة
-                المخاطر أهم من أي توقع أو صفقة منفردة.
-            </p>
-
-        </div>
-
-
-        <div class="trading-stats">
-
-            <div>
-                <strong>01</strong>
-                <span>Risk First</span>
-            </div>
-
-            <div>
-                <strong>02</strong>
-                <span>Data Driven</span>
-            </div>
-
-            <div>
-                <strong>03</strong>
-                <span>Stay Disciplined</span>
-            </div>
-
-            <div>
-                <strong>04</strong>
-                <span>Keep Learning</span>
             </div>
 
         </div>
@@ -599,7 +503,7 @@
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- ===== CONTACT ===== -->
 
 <section class="section contact-section" id="contact">
 
@@ -607,80 +511,63 @@
 
         <div class="contact-box">
 
-            <div class="contact-content">
+            <div>
 
-                <span class="section-number">05</span>
+                <span class="contact-number">04</span>
 
-                <p class="section-label">CONTACT ME</p>
+                <small>CONTACT ME</small>
 
                 <h2>
-                    عندك سؤال؟
-                    <span>خلينا نتكلم.</span>
+                    عندك استفسار؟
+                    <strong>تواصل معي.</strong>
                 </h2>
 
                 <p>
-                    لو عندك استفسار، فكرة مشروع، اقتراح،
-                    أو حابب تتواصل معي بخصوص أي شيء متعلق
-                    بالبرمجة أو التكنولوجيا أو غيرها،
+                    لو عندك سؤال أو استفسار أو فكرة مشروع،
                     يمكنك التواصل معي مباشرة.
                 </p>
 
                 <p>
-                    سأكون سعيدًا جدًا بالتعرف عليك
-                    والاستماع إلى فكرتك.
+                    يسعدني استقبال رسالتك والتعرف عليك.
                 </p>
 
             </div>
 
 
-            <div class="contact-buttons">
+            <div class="contact-links">
 
-                <!-- غيّر البيانات هنا -->
+                <a href="mailto:medoali158001@gmail.com">
 
-                <a
-                    href="mailto:YOUR_EMAIL@gmail.com"
-                    class="contact-btn email"
-                >
                     <span>✉</span>
 
                     <div>
-                        <small>Email</small>
-                        <strong>راسلني عبر البريد</strong>
+                        <small>EMAIL</small>
+                        <strong>
+                            medoali158001@gmail.com
+                        </strong>
                     </div>
 
-                        <b>↗</b>
+                    <b>↗</b>
+
                 </a>
 
 
                 <a
-                    href="https://wa.me/YOURNUMBER"
+                    href="https://wa.me/201281689551"
                     target="_blank"
-                    class="contact-btn whatsapp"
                 >
-                    <span>☏</span>
+
+                    <span>☎</span>
 
                     <div>
-                        <small>WhatsApp</small>
-                        <strong>تواصل معي مباشرة</strong>
+                        <small>WHATSAPP</small>
+                        <strong>
+                            تواصل معي مباشرة
+                        </strong>
                     </div>
 
                     <b>↗</b>
-                </a>
 
-
-                <a
-                    href="https://github.com/"
-                    target="_blank"
-                    class="contact-btn"
-                >
-                    <span>◉</span>
-
-                    <div>
-                        <small>GitHub</small>
-                        <strong>شاهد مشاريعي</strong>
-                    </div>
-
-                    <b>↗</b>
                 </a>
 
             </div>
@@ -692,53 +579,59 @@
 </section>
 
 
-<!-- ================= FINAL CTA ================= -->
+<!-- ===== FINAL ===== -->
 
-<section class="final-section">
+<section class="final">
 
     <div class="container">
 
-        <div class="final-content">
+        <small>THE JOURNEY CONTINUES</small>
 
-            <span>THE JOURNEY CONTINUES</span>
+        <h2>
+            Learn.
+            <strong>Build.</strong>
+            Improve.
+        </h2>
 
-            <h2>
-                Learn.
-                <span>Build.</span>
-                Improve.
-            </h2>
+        <p>
+            الرحلة مستمرة، والقادم أفضل بإذن الله.
+        </p>
 
-            <p>
-                ما زالت الرحلة في بدايتها...
-                والقادم أفضل بإذن الله.
-            </p>
-
-            <a href="#home" class="back-top">
-                ↑ العودة للأعلى
-            </a>
-
-        </div>
+        <a href="#home">
+            ↑ العودة للأعلى
+        </a>
 
     </div>
 
 </section>
 
-</main>
+
+<!-- ===== WHATSAPP ===== -->
+
+<a
+    href="https://wa.me/201281689551"
+    target="_blank"
+    class="whatsapp"
+>
+    ☎
+</a>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- ===== FOOTER ===== -->
 
 <footer>
 
-    <div class="container footer-content">
+    <div class="container">
 
-        <div>
-            <strong>Basmala.</strong>
-            <small>Medicine • Programming • Trading</small>
-        </div>
+        <strong>Dr. Mohamed Ali</strong>
+
+        <span>
+            Medicine • Technology • Trading
+        </span>
 
         <p>
-            © <span id="year"></span> Basmala. All Rights Reserved.
+            © <span id="year"></span>
+            Dr. Mohamed Ali
         </p>
 
     </div>
@@ -750,3 +643,4 @@
 
 </body>
 </html>
+```
