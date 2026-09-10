@@ -1,723 +1,752 @@
-```html
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Basmala | Doctor • Developer • Trader</title>
+    <title>Basmala | Medical Student • Developer • Trader</title>
 
-  <meta
-    name="description"
-    content="Personal portfolio of Basmala — Medicine, Programming, and Trading."
-  />
+    <meta
+        name="description"
+        content="الموقع الشخصي لبسم الله — الطب، البرمجة، التداول والتعلم المستمر."
+    >
 
-  <meta name="theme-color" content="#07111f" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Background -->
-  <div class="bg-grid"></div>
-  <div class="glow glow-1"></div>
-  <div class="glow glow-2"></div>
+<!-- ================= NAVBAR ================= -->
 
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container nav">
+<header class="navbar" id="navbar">
 
-      <a href="#home" class="logo">
-        <span>B</span>
-        <strong>Basmala</strong>
-      </a>
+    <div class="container nav-content">
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#trading">Trading</a>
-        <a href="#contact">Contact</a>
-      </nav>
+        <a href="#home" class="logo">
+            <span>B</span>
+            <div>
+                <strong>Basmala</strong>
+                <small>Personal Website</small>
+            </div>
+        </a>
 
-      <div class="nav-actions">
-        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
-          ☀
-        </button>
+        <nav id="navMenu">
+            <a href="#home">الرئيسية</a>
+            <a href="#about">عني</a>
+            <a href="#skills">مهاراتي</a>
+            <a href="#projects">مشاريعي</a>
+            <a href="#trading">التداول</a>
+            <a href="#contact">تواصل معي</a>
+        </nav>
 
-        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-          ☰
-        </button>
-      </div>
+        <button class="menu-btn" id="menuBtn">☰</button>
 
     </div>
-  </header>
 
-  <main>
+</header>
 
-    <!-- HERO -->
-    <section class="hero section" id="home">
 
-      <div class="container hero-grid">
+<main>
 
-        <div class="hero-content">
+<!-- ================= HERO ================= -->
 
-          <div class="badge">
-            <span class="status-dot"></span>
-            Available for new opportunities
-          </div>
+<section class="hero" id="home">
 
-          <p class="eyebrow">WELCOME TO MY DIGITAL SPACE</p>
+    <div class="container hero-grid">
 
-          <h1>
-            Doctor.
-            <span>Developer.</span>
-            Trader.
-          </h1>
+        <div class="hero-text">
 
-          <p class="hero-text">
-            I’m Basmala — exploring the intersection of
-            <strong>medicine, technology, and financial markets.</strong>
-            I build, learn, analyze, and create with purpose.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">
-              Explore My Work
-              <span>↗</span>
-            </a>
-
-            <a href="#contact" class="btn btn-secondary">
-              Let's Connect
-            </a>
-          </div>
-
-          <div class="hero-stats">
-
-            <div>
-              <strong>03</strong>
-              <span>Fields</span>
+            <div class="availability">
+                <span></span>
+                متاح للتواصل والاستفسارات
             </div>
 
-            <div>
-              <strong>∞</strong>
-              <span>Curiosity</span>
+            <p class="small-title">مرحبًا، أنا</p>
+
+            <h1>
+                Basmala
+            </h1>
+
+            <div class="typing-box">
+                <span>أنا </span>
+                <strong id="typingText"></strong>
+                <span class="cursor">|</span>
             </div>
 
-            <div>
-              <strong>24/7</strong>
-              <span>Learning</span>
+            <p class="hero-description">
+                شخص شغوف بالتعلم والتطور، أجمع بين دراسة
+                <strong>الطب</strong>،
+                وحب <strong>البرمجة والتكنولوجيا</strong>،
+                واهتمامي بـ <strong>الأسواق والتداول</strong>.
+            </p>
+
+            <p class="hero-description second">
+                هدفي ليس أن أكون محصورًا في مجال واحد، بل أن أتعلم
+                من كل مجال وأستخدم المعرفة التي أكتسبها لبناء مستقبل
+                أفضل وأكثر تأثيرًا.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#about" class="btn primary">
+                    تعرف عليّ أكثر
+                    <span>↓</span>
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    تواصل معي
+                    <span>↗</span>
+                </a>
+
             </div>
 
-          </div>
+            <div class="quick-info">
+
+                <div>
+                    <strong>01</strong>
+                    <span>Medicine</span>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <span>Programming</span>
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    <span>Trading</span>
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="hero-card-wrap">
 
-          <div class="orbit orbit-1"></div>
-          <div class="orbit orbit-2"></div>
+        <!-- PHOTO -->
 
-          <div class="profile-card">
+        <div class="hero-photo">
 
-            <div class="card-top">
-              <span>PERSONAL BRAND</span>
-              <span class="live">● LIVE</span>
-            </div>
+            <div class="photo-glow"></div>
 
-            <div class="avatar">
-              B
-            </div>
+            <div class="photo-card">
 
-            <h2>Basmala</h2>
+                <div class="photo-top">
+                    <span>MY JOURNEY</span>
+                    <span>2026</span>
+                </div>
 
-            <p>Medicine × Code × Markets</p>
+                <div class="image-wrapper">
+                    <img
+                        src="profile.jpg"
+                        alt="Basmala"
+                    >
+                </div>
 
-            <div class="mini-grid">
+                <div class="photo-info">
 
-              <div>
-                <span>MED</span>
-                <strong>01</strong>
-              </div>
+                    <div>
+                        <strong>Basmala</strong>
+                        <span>Medical Student</span>
+                    </div>
 
-              <div>
-                <span>CODE</span>
-                <strong>02</strong>
-              </div>
+                    <div class="verified">
+                        ✓
+                    </div>
 
-              <div>
-                <span>TRADE</span>
-                <strong>03</strong>
-              </div>
+                </div>
 
             </div>
 
-            <div class="card-line"></div>
-
-            <div class="quote">
-              “Learn deeply. Build boldly.”
+            <div class="floating-card card-one">
+                <span>✚</span>
+                Medicine
             </div>
 
-          </div>
+            <div class="floating-card card-two">
+                <span>&lt;/&gt;</span>
+                Coding
+            </div>
+
+            <div class="floating-card card-three">
+                <span>↗</span>
+                Trading
+            </div>
 
         </div>
 
-      </div>
+    </div>
 
-      <div class="scroll-indicator">
+    <div class="scroll-down">
         <span></span>
-        Scroll to explore
-      </div>
+        اكتشف المزيد
+    </div>
 
-    </section>
+</section>
 
 
-    <!-- ABOUT -->
-    <section class="section about" id="about">
+<!-- ================= MOVING TEXT ================= -->
 
-      <div class="container">
+<section class="marquee-section">
+
+    <div class="marquee">
+
+        <div class="marquee-content">
+
+            <span>MEDICINE</span>
+            <i>✦</i>
+
+            <span>PROGRAMMING</span>
+            <i>✦</i>
+
+            <span>TRADING</span>
+            <i>✦</i>
+
+            <span>LEARNING</span>
+            <i>✦</i>
+
+            <span>CREATIVITY</span>
+            <i>✦</i>
+
+            <span>DISCIPLINE</span>
+            <i>✦</i>
+
+            <span>MEDICINE</span>
+            <i>✦</i>
+
+            <span>PROGRAMMING</span>
+            <i>✦</i>
+
+            <span>TRADING</span>
+            <i>✦</i>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section" id="about">
+
+    <div class="container">
 
         <div class="section-heading">
-          <p class="eyebrow">01 — ABOUT</p>
 
-          <h2>
-            More than one path.
-            <span>One mindset.</span>
-          </h2>
+            <span class="section-number">01</span>
 
-          <p>
-            I believe the most interesting ideas happen when different
-            disciplines meet.
-          </p>
+            <div>
+                <p>ABOUT ME</p>
+
+                <h2>
+                    من أنا؟
+                    <span>وإلى أين أريد أن أصل؟</span>
+                </h2>
+            </div>
+
         </div>
+
 
         <div class="about-grid">
 
-          <div class="about-text glass">
-
-            <p>
-              My journey combines the analytical world of medicine,
-              the creative problem-solving of programming, and the
-              strategic thinking required in financial markets.
-            </p>
-
-            <p>
-              Each field teaches me something different — precision,
-              patience, experimentation, discipline, and continuous learning.
-            </p>
-
-            <p>
-              This website is a space where I share what I build,
-              what I learn, and where I'm heading next.
-            </p>
-
-          </div>
-
-          <div class="about-cards">
-
-            <article class="info-card medical">
-              <div class="icon">✚</div>
-              <h3>Medicine</h3>
-              <p>
-                Learning the science of the human body and developing
-                a disciplined clinical mindset.
-              </p>
-            </article>
-
-            <article class="info-card coding">
-              <div class="icon">&lt;/&gt;</div>
-              <h3>Programming</h3>
-              <p>
-                Turning ideas into useful digital products and
-                continuously improving technical skills.
-              </p>
-            </article>
-
-            <article class="info-card markets">
-              <div class="icon">↗</div>
-              <h3>Trading</h3>
-              <p>
-                Studying market behavior, risk management,
-                psychology, and data-driven decision making.
-              </p>
-            </article>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-    <section class="section skills-section" id="skills">
-
-      <div class="container">
-
-        <div class="section-heading center">
-          <p class="eyebrow">02 — SKILLS</p>
-
-          <h2>
-            Skills that
-            <span>keep evolving.</span>
-          </h2>
-
-          <p>
-            A growing toolkit built through practice, experimentation,
-            and real projects.
-          </p>
-        </div>
-
-        <div class="skills-grid">
-
-          <div class="skill-category glass">
-            <div class="skill-title">
-              <span class="skill-icon blue">⌘</span>
-              <div>
-                <h3>Development</h3>
-                <p>Building digital experiences</p>
-              </div>
-            </div>
-
-            <div class="skill-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>Git</span>
-              <span>GitHub</span>
-              <span>UI Design</span>
-            </div>
-          </div>
-
-          <div class="skill-category glass">
-            <div class="skill-title">
-              <span class="skill-icon green">✚</span>
-              <div>
-                <h3>Medical</h3>
-                <p>Science & clinical learning</p>
-              </div>
-            </div>
-
-            <div class="skill-tags">
-              <span>Medical Science</span>
-              <span>Research</span>
-              <span>Critical Thinking</span>
-              <span>Analysis</span>
-              <span>Learning</span>
-            </div>
-          </div>
-
-          <div class="skill-category glass">
-            <div class="skill-title">
-              <span class="skill-icon purple">↗</span>
-              <div>
-                <h3>Markets</h3>
-                <p>Analysis & risk management</p>
-              </div>
-            </div>
-
-            <div class="skill-tags">
-              <span>Technical Analysis</span>
-              <span>Risk Management</span>
-              <span>Market Psychology</span>
-              <span>Research</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-    <section class="section projects" id="projects">
-
-      <div class="container">
-
-        <div class="section-heading">
-          <p class="eyebrow">03 — PROJECTS</p>
-
-          <h2>
-            Things I've
-            <span>built.</span>
-          </h2>
-
-          <p>
-            A selection of projects and experiments. Replace these
-            examples with your real work.
-          </p>
-        </div>
-
-        <div class="projects-grid">
-
-          <article class="project-card">
-
-            <div class="project-number">01</div>
-
-            <div class="project-icon">🌐</div>
-
-            <div class="project-content">
-              <span class="project-type">WEB DEVELOPMENT</span>
-
-              <h3>Personal Portfolio</h3>
-
-              <p>
-                A modern responsive personal website designed to
-                showcase skills, projects, and professional identity.
-              </p>
-
-              <div class="project-tech">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JS</span>
-              </div>
-
-              <a href="#" class="project-link">
-                View Project ↗
-              </a>
-            </div>
-
-          </article>
-
-
-          <article class="project-card">
-
-            <div class="project-number">02</div>
-
-            <div class="project-icon">📊</div>
-
-            <div class="project-content">
-              <span class="project-type">ANALYSIS</span>
-
-              <h3>Market Dashboard</h3>
-
-              <p>
-                An experimental dashboard concept for organizing
-                market data, watchlists, and trading ideas.
-              </p>
-
-              <div class="project-tech">
-                <span>Data</span>
-                <span>Charts</span>
-                <span>UI</span>
-              </div>
-
-              <a href="#" class="project-link">
-                View Project ↗
-              </a>
-            </div>
-
-          </article>
-
-
-          <article class="project-card">
-
-            <div class="project-number">03</div>
-
-            <div class="project-icon">🧠</div>
-
-            <div class="project-content">
-              <span class="project-type">EXPERIMENT</span>
-
-              <h3>Learning Hub</h3>
-
-              <p>
-                A concept for organizing educational resources,
-                notes, and knowledge across different disciplines.
-              </p>
-
-              <div class="project-tech">
-                <span>Research</span>
-                <span>Notes</span>
-                <span>Learning</span>
-              </div>
-
-              <a href="#" class="project-link">
-                View Project ↗
-              </a>
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- TRADING -->
-    <section class="section trading" id="trading">
-
-      <div class="container">
-
-        <div class="trading-box">
-
-          <div class="trading-content">
-
-            <p class="eyebrow">04 — MARKETS</p>
-
-            <h2>
-              Think in
-              <span>probabilities.</span>
-            </h2>
-
-            <p>
-              Trading is not about predicting the future.
-              It's about building a process, managing risk,
-              and making decisions under uncertainty.
-            </p>
-
-            <div class="principles">
-
-              <div>
-                <strong>01</strong>
-                <span>Risk First</span>
-              </div>
-
-              <div>
-                <strong>02</strong>
-                <span>Data Driven</span>
-              </div>
-
-              <div>
-                <strong>03</strong>
-                <span>Stay Disciplined</span>
-              </div>
+            <div class="about-main">
+
+                <p>
+                    أنا Basmala، شخص أؤمن أن الإنسان لا يجب أن يتوقف
+                    عند مجال واحد من المعرفة.
+                </p>
+
+                <p>
+                    دراسة الطب جعلتني أتعلم أهمية الدقة والصبر
+                    والتفكير المنطقي، بينما البرمجة علمتني كيف أحول
+                    الأفكار إلى مشاريع حقيقية يمكن استخدامها والاستفادة منها.
+                </p>
+
+                <p>
+                    وفي نفس الوقت، اهتمامي بالتداول والأسواق جعلني
+                    أكثر اهتمامًا بإدارة المخاطر، تحليل البيانات،
+                    التحكم في القرارات، وفهم الجانب النفسي وراء كل قرار.
+                </p>
+
+                <p>
+                    بالنسبة لي، الرحلة أهم من الوصول.
+                    كل يوم هو فرصة جديدة للتعلم، التجربة،
+                    تطوير المهارات، وبناء شيء أفضل من اليوم السابق.
+                </p>
 
             </div>
 
-          </div>
 
-          <div class="market-visual">
+            <div class="about-side">
 
-            <div class="chart-card">
+                <div class="quote-card">
 
-              <div class="chart-header">
-                <div>
-                  <small>MARKET STUDY</small>
-                  <strong>BTC / USD</strong>
+                    <div class="quote-icon">“</div>
+
+                    <h3>
+                        لا أبحث عن طريق سهل،
+                        بل عن طريق يجعلني أفضل.
+                    </h3>
+
+                    <p>
+                        Learning • Building • Improving
+                    </p>
+
                 </div>
 
-                <span class="positive">+4.82%</span>
-              </div>
+                <div class="numbers">
 
-              <div class="chart">
+                    <div>
+                        <strong>∞</strong>
+                        <span>Learning</span>
+                    </div>
 
-                <svg viewBox="0 0 500 220" preserveAspectRatio="none">
+                    <div>
+                        <strong>3</strong>
+                        <span>Fields</span>
+                    </div>
 
-                  <defs>
-                    <linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
-                      <stop offset="0%" stop-color="#00e5a0" stop-opacity=".35"/>
-                      <stop offset="100%" stop-color="#00e5a0" stop-opacity="0"/>
-                    </linearGradient>
-                  </defs>
+                    <div>
+                        <strong>1</strong>
+                        <span>Vision</span>
+                    </div>
 
-                  <path
-                    d="M0 190
-                       C40 180 45 140 80 155
-                       S120 170 145 125
-                       S185 150 215 105
-                       S255 120 285 75
-                       S320 95 350 65
-                       S390 90 420 40
-                       S460 60 500 20
-                       L500 220
-                       L0 220 Z"
-                    fill="url(#area)"
-                  />
-
-                  <path
-                    d="M0 190
-                       C40 180 45 140 80 155
-                       S120 170 145 125
-                       S185 150 215 105
-                       S255 120 285 75
-                       S320 95 350 65
-                       S390 90 420 40
-                       S460 60 500 20"
-                    fill="none"
-                    stroke="#00e5a0"
-                    stroke-width="4"
-                  />
-
-                </svg>
-
-              </div>
-
-              <div class="chart-footer">
-                <span>Risk Management</span>
-                <span>Process > Prediction</span>
-              </div>
+                </div>
 
             </div>
-
-          </div>
 
         </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ACHIEVEMENTS -->
-    <section class="section achievements">
-
-      <div class="container">
-
-        <div class="section-heading center">
-
-          <p class="eyebrow">05 — MINDSET</p>
-
-          <h2>
-            Always
-            <span>moving forward.</span>
-          </h2>
-
-        </div>
-
-        <div class="timeline">
-
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div>
-              <small>01</small>
-              <h3>Learn</h3>
-              <p>Build a strong foundation.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div>
-              <small>02</small>
-              <h3>Experiment</h3>
-              <p>Turn knowledge into practical experience.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div>
-              <small>03</small>
-              <h3>Build</h3>
-              <p>Create things that solve real problems.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div>
-              <small>04</small>
-              <h3>Improve</h3>
-              <p>Keep refining the process.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section class="section contact" id="contact">
-
-      <div class="container">
-
-        <div class="contact-box">
-
-          <div>
-
-            <p class="eyebrow">06 — CONTACT</p>
-
-            <h2>
-              Let's build
-              <span>something great.</span>
-            </h2>
-
-            <p>
-              Have an idea, project, or simply want to connect?
-              I'd love to hear from you.
-            </p>
-
-          </div>
-
-          <div class="contact-actions">
-
-            <a
-              href="mailto:your@email.com"
-              class="btn btn-primary"
-            >
-              Send an Email ↗
-            </a>
-
-            <a
-              href="https://github.com/"
-              target="_blank"
-              rel="noopener"
-              class="social-btn"
-            >
-              GitHub
-            </a>
-
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noopener"
-              class="social-btn"
-            >
-              LinkedIn
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer class="footer">
-
-    <div class="container footer-inner">
-
-      <div>
-        <strong>Basmala.</strong>
-        <span>Medicine • Code • Markets</span>
-      </div>
-
-      <p>
-        © <span id="year"></span> Basmala. Built with curiosity.
-      </p>
 
     </div>
 
-  </footer>
+</section>
 
 
-  <script src="script.js"></script>
+<!-- ================= SKILLS ================= -->
+
+<section class="section dark-section" id="skills">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-number">02</span>
+
+            <div>
+                <p>MY SKILLS</p>
+
+                <h2>
+                    مجالات
+                    <span>أعمل على تطويرها.</span>
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <div class="skill-icon medical">✚</div>
+
+                <span>01</span>
+
+                <h3>Medicine</h3>
+
+                <p>
+                    دراسة العلوم الطبية، التفكير التحليلي،
+                    البحث، التعلم المستمر، وفهم جسم الإنسان.
+                </p>
+
+                <div class="skill-line">
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card featured">
+
+                <div class="skill-icon code">&lt;/&gt;</div>
+
+                <span>02</span>
+
+                <h3>Programming</h3>
+
+                <p>
+                    تصميم وتطوير المواقع، بناء الواجهات،
+                    JavaScript، HTML، CSS والعمل على المشاريع الرقمية.
+                </p>
+
+                <div class="skill-line">
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon trading">↗</div>
+
+                <span>03</span>
+
+                <h3>Trading</h3>
+
+                <p>
+                    دراسة الأسواق، التحليل الفني، إدارة المخاطر،
+                    الانضباط، وعلم النفس في التداول.
+                </p>
+
+                <div class="skill-line">
+                    <span></span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="skills-tags">
+
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>GitHub</span>
+            <span>Web Design</span>
+            <span>Research</span>
+            <span>Critical Thinking</span>
+            <span>Technical Analysis</span>
+            <span>Risk Management</span>
+            <span>Problem Solving</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="section" id="projects">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-number">03</span>
+
+            <div>
+                <p>MY PROJECTS</p>
+
+                <h2>
+                    أفكار تتحول إلى
+                    <span>مشاريع.</span>
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+            <article class="project">
+
+                <div class="project-number">01</div>
+
+                <div class="project-symbol">🌐</div>
+
+                <span>WEB DEVELOPMENT</span>
+
+                <h3>Personal Website</h3>
+
+                <p>
+                    موقع شخصي احترافي لعرض الهوية الشخصية،
+                    المهارات، المشاريع ومجالات الاهتمام.
+                </p>
+
+                <div class="tags">
+                    <small>HTML</small>
+                    <small>CSS</small>
+                    <small>JavaScript</small>
+                </div>
+
+            </article>
+
+
+            <article class="project">
+
+                <div class="project-number">02</div>
+
+                <div class="project-symbol">📊</div>
+
+                <span>TRADING</span>
+
+                <h3>Market Analysis</h3>
+
+                <p>
+                    أفكار وتجارب لتحليل الأسواق وتنظيم البيانات
+                    وبناء نظام أكثر انضباطًا لاتخاذ القرارات.
+                </p>
+
+                <div class="tags">
+                    <small>Analysis</small>
+                    <small>Risk</small>
+                    <small>Markets</small>
+                </div>
+
+            </article>
+
+
+            <article class="project">
+
+                <div class="project-number">03</div>
+
+                <div class="project-symbol">🧠</div>
+
+                <span>LEARNING</span>
+
+                <h3>Knowledge Hub</h3>
+
+                <p>
+                    مساحة لتنظيم الملاحظات والمصادر والأفكار
+                    التي أتعلمها في مختلف المجالات.
+                </p>
+
+                <div class="tags">
+                    <small>Research</small>
+                    <small>Notes</small>
+                    <small>Learning</small>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TRADING ================= -->
+
+<section class="section trading-section" id="trading">
+
+    <div class="container trading-box">
+
+        <div>
+
+            <span class="section-number">04</span>
+
+            <p class="section-label">TRADING MINDSET</p>
+
+            <h2>
+                لا تحاول
+                <span>التنبؤ بالمستقبل.</span>
+            </h2>
+
+            <p>
+                اهتمامي بالتداول لا يعتمد على فكرة تحقيق أرباح
+                سريعة، بل على التعلم وفهم الأسواق وإدارة المخاطر
+                وبناء نظام واضح لاتخاذ القرارات.
+            </p>
+
+            <p>
+                أهم شيء تعلمته من الأسواق هو أن الانضباط وإدارة
+                المخاطر أهم من أي توقع أو صفقة منفردة.
+            </p>
+
+        </div>
+
+
+        <div class="trading-stats">
+
+            <div>
+                <strong>01</strong>
+                <span>Risk First</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>Data Driven</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Stay Disciplined</span>
+            </div>
+
+            <div>
+                <strong>04</strong>
+                <span>Keep Learning</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="contact-content">
+
+                <span class="section-number">05</span>
+
+                <p class="section-label">CONTACT ME</p>
+
+                <h2>
+                    عندك سؤال؟
+                    <span>خلينا نتكلم.</span>
+                </h2>
+
+                <p>
+                    لو عندك استفسار، فكرة مشروع، اقتراح،
+                    أو حابب تتواصل معي بخصوص أي شيء متعلق
+                    بالبرمجة أو التكنولوجيا أو غيرها،
+                    يمكنك التواصل معي مباشرة.
+                </p>
+
+                <p>
+                    سأكون سعيدًا جدًا بالتعرف عليك
+                    والاستماع إلى فكرتك.
+                </p>
+
+            </div>
+
+
+            <div class="contact-buttons">
+
+                <!-- غيّر البيانات هنا -->
+
+                <a
+                    href="mailto:YOUR_EMAIL@gmail.com"
+                    class="contact-btn email"
+                >
+                    <span>✉</span>
+
+                    <div>
+                        <small>Email</small>
+                        <strong>راسلني عبر البريد</strong>
+                    </div>
+
+                        <b>↗</b>
+                </a>
+
+
+                <a
+                    href="https://wa.me/YOURNUMBER"
+                    target="_blank"
+                    class="contact-btn whatsapp"
+                >
+                    <span>☏</span>
+
+                    <div>
+                        <small>WhatsApp</small>
+                        <strong>تواصل معي مباشرة</strong>
+                    </div>
+
+                    <b>↗</b>
+                </a>
+
+
+                <a
+                    href="https://github.com/"
+                    target="_blank"
+                    class="contact-btn"
+                >
+                    <span>◉</span>
+
+                    <div>
+                        <small>GitHub</small>
+                        <strong>شاهد مشاريعي</strong>
+                    </div>
+
+                    <b>↗</b>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section class="final-section">
+
+    <div class="container">
+
+        <div class="final-content">
+
+            <span>THE JOURNEY CONTINUES</span>
+
+            <h2>
+                Learn.
+                <span>Build.</span>
+                Improve.
+            </h2>
+
+            <p>
+                ما زالت الرحلة في بدايتها...
+                والقادم أفضل بإذن الله.
+            </p>
+
+            <a href="#home" class="back-top">
+                ↑ العودة للأعلى
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div>
+            <strong>Basmala.</strong>
+            <small>Medicine • Programming • Trading</small>
+        </div>
+
+        <p>
+            © <span id="year"></span> Basmala. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
-```
